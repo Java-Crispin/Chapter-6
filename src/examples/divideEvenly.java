@@ -16,6 +16,10 @@ public class divideEvenly {
         }
         System.out.println("________");
         do{
-            if(count)
+            if(count % 2 == 0){
+                System.out.println(count);
+                count++;
+            }while(count<10);
+            System.out.println("________");
     }
 }
