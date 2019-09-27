@@ -6,7 +6,7 @@ public class testScoreStatistics {
         int total = 0;
         int high = 0;
         int low = 100;
-        int average;
+        int average = 0;
         int count = 0;
         int userInput = 0;
         final int MIN_SCORE = 0;
@@ -24,17 +24,20 @@ public class testScoreStatistics {
             else{
                 System.out.println("Please enter the next score.");
                 count ++;
+                total = total + (userInput);
+                average = total / count;
                 userInput = input.nextInt();
+                if(userInput >= 999){
+                }else{
+                    high = userInput;
+                }
+                if(userInput < low){
+                    low = userInput;
+                }
             }
-            if(userInput > high){
-                high = userInput;
-            }
-            else if(userInput < low){
-                low = userInput;
+            if(userInput == 999){
+                System.out.println("The total is "+total+"\nThe average is "+average+"\nThe highest score is "+high+"\nThe lowest score is "+low);
             }
         }
-        total = total + userInput;
-        average = total/count;
-        System.out.println(total + average);
     }
 }

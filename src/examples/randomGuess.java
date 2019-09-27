@@ -20,6 +20,7 @@ public class randomGuess {
             else if(choice < rand_pick){
                 System.out.println("Too low!");
             }
+            counter = counter ++;
         }
         System.out.println("It took you " + counter + " guesses to get it.");
     }
