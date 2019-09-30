@@ -16,23 +16,19 @@ public class FixDebugSix4 {
         low = input.nextInt();
         System.out.print("Enter high value... ");
         high = input.nextInt();
-        while(high < low);{
-            System.out.println("The number you entered for a high number, " +
-                    high + ", is not more than " + low);
-            System.out.print("Enter a number higher than " + low + "... ");
-            high = input.nextInt();
-        }
-        while(count < NUM);{
+        if (high < low) {
+                System.out.println();
+            }
+        do while (count < NUM) {
             double result = Math.random();
             // random() returns value between 0 and 1
-            int answer = (int) (result * 10 + low);
+            int answer =  (int) (result * 10 + low);
             // multiply by 10 and add low -- random is at least the value of low
             // only use answer if it is low enough
-            if(answer < high) {
+            if (answer < high) {
                 System.out.print(answer + "  ");
-                count = count ++;
+                count = count + 1;
             }
-        }
-        System.out.println();
+        }while(count > NUM);
     }
 }
